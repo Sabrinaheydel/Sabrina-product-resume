@@ -51,12 +51,16 @@ export type ResumeContent = {
 
 const sharedStack = [
   "Lovable",
+  "Webflow",
   "Supabase",
   "ChatGPT",
   "Claude",
+  "Gemini",
   "GitHub",
   "Next.js",
+  "n8n",
   "Figma",
+  "Bubble",
   "Notion",
   "Brevo",
   "Make",
@@ -98,11 +102,10 @@ export const en: ResumeContent = {
     "From understanding the business need to a working MVP: product, UX, AI and automation.",
   contacts: [
     { label: "France", href: null },
-    { label: "sabrina@agence360digital.fr", href: "mailto:sabrina@agence360digital.fr" },
-    { label: "+33 6 00 00 00 00", href: "tel:+33600000000" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/sabrinaheydel" },
-    { label: "Portfolio", href: "https://www.agence360digital.fr" },
-    { label: "Malt", href: "https://www.malt.fr" },
+    { label: "sabrinaheydel@gmail.com", href: "mailto:sabrinaheydel@gmail.com" },
+    { label: "+33 6 80 46 74 88", href: "tel:+33680467488" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/sabrina-heydel-86021a23b/" },
+    { label: "Portfolio", href: "https://www.agence360digital.fr/" },
   ],
   about: [
     "I turn business problems into working digital products and systems. I support companies from the first framing of the need through to a functional MVP, combining product strategy, UX, artificial intelligence, automation and no-code development.",
@@ -280,11 +283,10 @@ export const fr: ResumeContent = {
     "De la compréhension du besoin au MVP fonctionnel : produit, UX, IA et automatisation.",
   contacts: [
     { label: "France", href: null },
-    { label: "sabrina@agence360digital.fr", href: "mailto:sabrina@agence360digital.fr" },
-    { label: "+33 6 00 00 00 00", href: "tel:+33600000000" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/sabrinaheydel" },
-    { label: "Portfolio", href: "https://www.agence360digital.fr" },
-    { label: "Malt", href: "https://www.malt.fr" },
+    { label: "sabrinaheydel@gmail.com", href: "mailto:sabrinaheydel@gmail.com" },
+    { label: "+33 6 80 46 74 88", href: "tel:+33680467488" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/sabrina-heydel-86021a23b/" },
+    { label: "Portfolio", href: "https://www.agence360digital.fr/" },
   ],
   about: [
     "Je transforme des problématiques métier en produits et systèmes digitaux fonctionnels. J'accompagne les entreprises depuis la compréhension du besoin jusqu'au MVP fonctionnel en combinant stratégie produit, UX, intelligence artificielle, automatisation et développement no-code.",
