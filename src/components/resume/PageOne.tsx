@@ -157,13 +157,13 @@ export function PageOne() {
             automatisation.
           </p>
         </div>
-        <div className="col-span-4">
+        <div className="col-span-4 flex justify-end">
           <img
             src={portrait}
             alt="Portrait de Sabrina Heydel, AI Product Builder"
             width={896}
             height={1152}
-            className="h-[35mm] w-full rounded-[12px] object-cover object-top"
+            className="h-[28mm] w-auto rounded-[12px] object-contain"
           />
         </div>
       </header>
