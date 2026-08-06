@@ -377,7 +377,7 @@ export const fr: ResumeContent = {
     {
       group: "Build & Automatisation",
       items: [
-        "Développement assisté par IA",
+        "Développement IA",
         "Automatisation",
         "No-Code",
         "Supabase",
@@ -393,8 +393,7 @@ export const fr: ResumeContent = {
     {
       company: "Agence 360 Digital",
       role: "Fondatrice — AI Product Builder",
-      detail:
-        "Product discovery, livraison assistée par IA et systèmes digitaux pour les PME.",
+      detail: "Product discovery, delivery assistée par IA et systèmes digitaux pour PME.",
     },
     {
       company: "Balenciaga",
@@ -410,7 +409,7 @@ export const fr: ResumeContent = {
       company: "Chanel",
       role: "Assistante chef de projet",
       detail:
-        "Déploiement RFID mondial · Support projet · Tests · Documentation · Coordination internationale",
+        "Déploiement RFID mondial · Tests · Documentation · Coordination internationale",
     },
     {
       company: "USIDE",
@@ -429,7 +428,7 @@ export const fr: ResumeContent = {
     { title: "LLCE Anglais", org: "Paris Sorbonne" },
     { title: "Marketing digital & Copywriting", org: "LiveMentor" },
     { title: "Copywriting avancé", org: "Marketing Mania" },
-    { title: "IA · Automatisation · APIs · Product Building", org: "Auto-formation continue" },
+    { title: "IA · Automatisation · APIs · Product", org: "Auto-formation continue" },
   ],
   languages: [
     { name: "Français", level: "Langue maternelle" },
