@@ -393,7 +393,7 @@ export const fr: ResumeContent = {
     {
       company: "Agence 360 Digital",
       role: "Fondatrice — AI Product Builder",
-      detail: "Product discovery, delivery assistée par IA et systèmes digitaux pour PME.",
+      detail: "Product discovery, livraison assistée par IA et systèmes digitaux pour PME.",
     },
     {
       company: "Balenciaga",
