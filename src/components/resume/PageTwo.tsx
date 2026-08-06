@@ -56,7 +56,7 @@ const experience = [
 
 const education = [
   { title: "BTS Tourisme", org: "IST Paris" },
-  { title: "Bachelor — History of Art, Museum Studies", org: "UQAM, Montreal" },
+  { title: "Baccalauréat — History of Art, Museology", org: "UQAM, Montreal" },
   { title: "LLCE English", org: "Paris Sorbonne" },
   { title: "Digital Marketing & Copywriting", org: "LiveMentor" },
   { title: "Advanced Copywriting", org: "Marketing Mania" },
