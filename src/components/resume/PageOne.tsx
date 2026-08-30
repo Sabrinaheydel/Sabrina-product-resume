@@ -23,15 +23,11 @@ function ProjectCard({ project, c }: { project: Project; c: ResumeContent }) {
         </div>
         <div className="col-span-7">
           <MetaLabel>{c.ui.solution}</MetaLabel>
-          <p className="text-[7.7pt] leading-[1.35] text-ink/85">
-            {project.solution.join(" · ")}
-          </p>
+          <p className="text-[7.7pt] leading-[1.35] text-ink/85">{project.solution.join(" · ")}</p>
         </div>
         <div className="col-span-5">
           <MetaLabel>{c.ui.myRole}</MetaLabel>
-          <p className="text-[7.7pt] leading-[1.35] text-ink/75">
-            {project.role.join(" · ")}
-          </p>
+          <p className="text-[7.7pt] leading-[1.35] text-ink/75">{project.role.join(" · ")}</p>
         </div>
         <div className="col-span-7">
           <MetaLabel>{c.ui.stack}</MetaLabel>
@@ -57,9 +53,7 @@ export function PageOne({ content: c }: { content: ResumeContent }) {
     <Sheet>
       <header className="grid grid-cols-12 gap-[6mm]">
         <div className="col-span-8">
-          <h1 className="text-[22pt] font-semibold leading-[1.02] tracking-[-0.03em]">
-            {c.name}
-          </h1>
+          <h1 className="text-[22pt] font-semibold leading-[1.02] tracking-[-0.03em]">{c.name}</h1>
           <p className="mt-[2mm] text-[11pt] font-medium leading-[1.3] text-ink/70">
             {c.title[0]}
             <span className="mx-[1.5mm] text-line">&amp;</span>
