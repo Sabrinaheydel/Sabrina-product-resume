@@ -31,17 +31,18 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
             <div key={item.company} className="relative pb-[2.2mm] last:pb-0">
               <span className="absolute -left-[5mm] top-[1.6mm] h-[1.6mm] w-[1.6mm] -translate-x-[0.8mm] rounded-full bg-accent-blue" />
               <div className="flex items-baseline justify-between gap-[4mm]">
-                <h3 className="text-[10pt] font-semibold leading-none tracking-[-0.01em]">
+                <h3 className="text-[9.6pt] font-semibold leading-none tracking-[-0.01em]">
                   {item.company}
+                  <span className="ml-[2mm] text-[8pt] font-medium text-ink/55">
+                    {item.role}
+                  </span>
                 </h3>
-                <span className="text-[7.4pt] font-medium tabular-nums text-ink/45">
+                <span className="shrink-0 text-[7.4pt] font-medium tabular-nums text-ink/45">
                   {item.period}
                 </span>
               </div>
-              <div className="mt-[1mm] text-[8.2pt] font-medium text-ink/60">{item.role}</div>
-              <p className="mt-[1mm] text-[8.2pt] leading-[1.45] text-ink/60">
-                {item.detail}
-              </p>
+              <p className="mt-[1mm] text-[8pt] leading-[1.4] text-ink/60">{item.detail}</p>
+
 
             </div>
           ))}
