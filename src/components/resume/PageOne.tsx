@@ -4,32 +4,32 @@ import type { Project, ResumeContent } from "@/content/resume";
 
 function ProjectCard({ project, c }: { project: Project; c: ResumeContent }) {
   return (
-    <div className="rounded-[12px] border border-line/80 bg-paper px-[3.6mm] py-[2.2mm] shadow-[0_1px_2px_rgba(15,23,42,0.03)]">
+    <div className="rounded-[12px] border border-line/80 bg-paper px-[3.2mm] py-[1.8mm] shadow-[0_1px_2px_rgba(15,23,42,0.03)]">
       <div className="flex items-baseline gap-[3mm] border-b border-line/70 pb-[1.8mm]">
         <span className="text-[7.5pt] font-semibold tabular-nums text-accent-blue">
           {project.index}
         </span>
-        <h3 className="text-[11.5pt] font-semibold leading-none tracking-[-0.01em]">
+        <h3 className="text-[10.8pt] font-semibold leading-none tracking-[-0.01em]">
           {project.name}
         </h3>
         <span className="ml-auto text-[7pt] font-medium uppercase tracking-[0.14em] text-ink/35">
           {c.ui.caseStudy}
         </span>
       </div>
-      <div className="mt-[2mm] grid grid-cols-12 gap-x-[4mm] gap-y-[1.8mm]">
+      <div className="mt-[1.6mm] grid grid-cols-12 gap-x-[4mm] gap-y-[1.4mm]">
         <div className="col-span-5">
           <MetaLabel>{c.ui.challenge}</MetaLabel>
-          <p className="text-[8pt] leading-[1.4] text-ink/75">{project.challenge}</p>
+          <p className="text-[7.7pt] leading-[1.35] text-ink/75">{project.challenge}</p>
         </div>
         <div className="col-span-7">
           <MetaLabel>{c.ui.solution}</MetaLabel>
-          <p className="text-[8pt] leading-[1.4] text-ink/85">
+          <p className="text-[7.7pt] leading-[1.35] text-ink/85">
             {project.solution.join(" · ")}
           </p>
         </div>
         <div className="col-span-5">
           <MetaLabel>{c.ui.myRole}</MetaLabel>
-          <p className="text-[8pt] leading-[1.4] text-ink/75">
+          <p className="text-[7.7pt] leading-[1.35] text-ink/75">
             {project.role.join(" · ")}
           </p>
         </div>
@@ -42,11 +42,11 @@ function ProjectCard({ project, c }: { project: Project; c: ResumeContent }) {
           </div>
         </div>
       </div>
-      <div className="mt-[2.2mm] flex items-start gap-[2.5mm] border-t border-line/70 pt-[1.8mm]">
+      <div className="mt-[1.8mm] flex items-start gap-[2.5mm] border-t border-line/70 pt-[1.4mm]">
         <span className="mt-[0.6mm] text-[6.8pt] font-semibold uppercase tracking-[0.14em] text-accent-blue">
           {c.ui.impact}
         </span>
-        <p className="text-[8.4pt] font-medium leading-[1.4]">{project.impact}</p>
+        <p className="text-[8pt] font-medium leading-[1.35]">{project.impact}</p>
       </div>
     </div>
   );
@@ -79,7 +79,7 @@ export function PageOne({ content: c }: { content: ResumeContent }) {
           />
         </div>
       </header>
-      <div className="mt-[4mm] flex flex-wrap items-center gap-x-[4mm] gap-y-[1.5mm] border-y border-line py-[1.8mm] text-[8pt] text-ink/70">
+      <div className="mt-[3mm] flex flex-wrap items-center gap-x-[4mm] gap-y-[1.5mm] border-y border-line py-[1.8mm] text-[8pt] text-ink/70">
         {c.contacts.map((item) =>
           item.href ? (
             <a
@@ -96,19 +96,19 @@ export function PageOne({ content: c }: { content: ResumeContent }) {
           ),
         )}
       </div>
-      <section className="mt-[4mm]">
+      <section className="mt-[3mm]">
         <SectionTitle label={c.ui.about} />
         <div className="grid grid-cols-12 gap-[5mm]">
           {c.about.map((p) => (
-            <p key={p} className="col-span-6 text-[8.6pt] leading-[1.55] text-ink/80">
+            <p key={p} className="col-span-6 text-[8.2pt] leading-[1.5] text-ink/80">
               {p}
             </p>
           ))}
         </div>
       </section>
-      <section className="mt-[4mm] flex-1">
+      <section className="mt-[3mm] flex-1">
         <SectionTitle label={c.ui.featured} hint={c.ui.featuredHint} />
-        <div className="space-y-[2mm]">
+        <div className="space-y-[1.8mm]">
           {c.projects.map((p) => (
             <ProjectCard key={p.name} project={p} c={c} />
           ))}
