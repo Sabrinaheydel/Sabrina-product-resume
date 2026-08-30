@@ -34,11 +34,15 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
                 <h3 className="text-[10pt] font-semibold leading-none tracking-[-0.01em]">
                   {item.company}
                 </h3>
-                <span className="text-[8.2pt] font-medium text-ink/60">{item.role}</span>
+                <span className="text-[7.4pt] font-medium tabular-nums text-ink/45">
+                  {item.period}
+                </span>
               </div>
-              <p className="mt-[1.4mm] text-[8.2pt] leading-[1.45] text-ink/60">
+              <div className="mt-[1mm] text-[8.2pt] font-medium text-ink/60">{item.role}</div>
+              <p className="mt-[1mm] text-[8.2pt] leading-[1.45] text-ink/60">
                 {item.detail}
               </p>
+
             </div>
           ))}
         </div>
