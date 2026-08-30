@@ -20,13 +20,14 @@ export async function exportSheetsToPdf(
   const pageWidth = pdf.internal.pageSize.getWidth();
   const pageHeight = pdf.internal.pageSize.getHeight();
 
-  for (let index = 0; index < sheets.length; index += 1) {
-    const canvas = await html2canvas(sheets[index], {
+  for (const [index, sheet] of sheets.entries()) {
+    const canvas = await html2canvas(sheet, {
       scale: 2,
       useCORS: true,
       backgroundColor: "#ffffff",
       logging: false,
     });
+
     if (index > 0) pdf.addPage();
     pdf.addImage(
       canvas.toDataURL("image/jpeg", 0.94),
