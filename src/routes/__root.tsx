@@ -77,14 +77,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
-      { property: "og:type", content: "website" },
+      { title: "Sabrina Heydel · AI Product Builder" },
+      {
+        name: "description",
+        content:
+          "Interactive bilingual product resume for Sabrina Heydel, AI Product Builder focused on business applications, CRM, automation and digital systems.",
+      },
+      { name: "author", content: "Sabrina Heydel" },
+      { property: "og:title", content: "Sabrina Heydel · AI Product Builder" },
+      {
+        property: "og:description",
+        content:
+          "Interactive bilingual product resume: business applications, CRM, automation and connected digital systems.",
+      },
+      { property: "og:type", content: "profile" },
+      {
+        property: "og:image",
+        content: "https://product-craft-suite-68.lovable.app/og-resume.jpg",
+      },
+      { property: "og:image:width", content: "600" },
+      { property: "og:image:height", content: "315" },
+      { property: "og:image:type", content: "image/jpeg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Sabrina Heydel · AI Product Builder" },
+      {
+        name: "twitter:description",
+        content:
+          "Interactive bilingual product resume: business applications, CRM, automation and connected digital systems.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://product-craft-suite-68.lovable.app/og-resume.jpg",
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
