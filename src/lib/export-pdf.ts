@@ -5,10 +5,7 @@
  * full-bleed on its own A4 page, which keeps the on-screen editorial layout
  * pixel-identical in the PDF and works on mobile browsers (unlike window.print).
  */
-export async function exportSheetsToPdf(
-  sheets: HTMLElement[],
-  fileName: string,
-): Promise<void> {
+export async function exportSheetsToPdf(sheets: HTMLElement[], fileName: string): Promise<void> {
   if (sheets.length === 0) return;
 
   const [{ default: jsPDF }, { default: html2canvas }] = await Promise.all([

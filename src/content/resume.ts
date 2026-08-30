@@ -109,8 +109,7 @@ export const en: ResumeContent = {
   },
   name: "Sabrina Heydel",
   title: ["AI Product Builder", "Full-Stack Digital Systems"],
-  lead:
-    "From the business problem to a deployed, production-ready system: product discovery, UX, architecture, data, APIs, automation, QA and deployment.",
+  lead: "From the business problem to a deployed, production-ready system: product discovery, UX, architecture, data, APIs, automation, QA and deployment.",
   contacts: [
     { label: "France", href: null },
     { label: "sabrinaheydel@gmail.com", href: "mailto:sabrinaheydel@gmail.com" },
@@ -125,8 +124,7 @@ export const en: ResumeContent = {
     {
       index: "01",
       name: "TalentFlow AI",
-      challenge:
-        "Recruiter workflow is fragmented across ATS, notes, email and separate AI tools.",
+      challenge: "Recruiter workflow is fragmented across ATS, notes, email and separate AI tools.",
       solution: [
         "Bilingual recruitment workspace",
         "Pipeline",
@@ -328,8 +326,7 @@ export const fr: ResumeContent = {
   },
   name: "Sabrina Heydel",
   title: ["AI Product Builder", "Systèmes digitaux full-stack"],
-  lead:
-    "De la problématique métier au système déployé et prêt pour la production : discovery produit, UX, architecture, données, APIs, automatisation, QA et déploiement.",
+  lead: "De la problématique métier au système déployé et prêt pour la production : discovery produit, UX, architecture, données, APIs, automatisation, QA et déploiement.",
   contacts: [
     { label: "France", href: null },
     { label: "sabrinaheydel@gmail.com", href: "mailto:sabrinaheydel@gmail.com" },
@@ -480,8 +477,7 @@ export const fr: ResumeContent = {
       company: "Chanel",
       role: "Assistante chef de projet",
       period: "Juin 2019–Août 2020",
-      detail:
-        "Déploiement RFID mondial · Tests · Documentation · Coordination internationale",
+      detail: "Déploiement RFID mondial · Tests · Documentation · Coordination internationale",
     },
     {
       company: "USIDE",
@@ -511,8 +507,7 @@ export const fr: ResumeContent = {
     { name: "Espagnol", level: "Notions" },
   ],
   techStack: sharedStack,
-  closing:
-    "J'aime transformer des problématiques métier complexes en produits digitaux simples.",
+  closing: "J'aime transformer des problématiques métier complexes en produits digitaux simples.",
   meta: {
     title: "Sabrina Heydel — AI Product Builder & Systèmes digitaux full-stack",
     description:

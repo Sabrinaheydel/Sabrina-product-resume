@@ -14,9 +14,7 @@ export function ResumeDocument({ content }: { content: ResumeContent }) {
     if (isExporting) return;
     setIsExporting(true);
     try {
-      const sheets = Array.from(
-        pagesRef.current?.querySelectorAll<HTMLElement>(".sheet") ?? [],
-      );
+      const sheets = Array.from(pagesRef.current?.querySelectorAll<HTMLElement>(".sheet") ?? []);
       await exportSheetsToPdf(sheets, content.ui.fileName);
     } catch {
       window.print();

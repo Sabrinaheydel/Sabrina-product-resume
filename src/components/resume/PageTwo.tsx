@@ -33,17 +33,13 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
               <div className="flex items-baseline justify-between gap-[4mm]">
                 <h3 className="text-[9.6pt] font-semibold leading-none tracking-[-0.01em]">
                   {item.company}
-                  <span className="ml-[2mm] text-[8pt] font-medium text-ink/55">
-                    {item.role}
-                  </span>
+                  <span className="ml-[2mm] text-[8pt] font-medium text-ink/55">{item.role}</span>
                 </h3>
                 <span className="shrink-0 text-[7.4pt] font-medium tabular-nums text-ink/45">
                   {item.period}
                 </span>
               </div>
               <p className="mt-[1mm] text-[8pt] leading-[1.4] text-ink/60">{item.detail}</p>
-
-
             </div>
           ))}
         </div>
