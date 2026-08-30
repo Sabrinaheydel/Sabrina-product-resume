@@ -114,6 +114,7 @@ export const en: ResumeContent = {
     { label: "France", href: null },
     { label: "sabrinaheydel@gmail.com", href: "mailto:sabrinaheydel@gmail.com" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/sabrina-heydel-86021a23b/" },
+    { label: "GitHub", href: "https://github.com/Sabrinaheydel" },
     { label: "Portfolio", href: "https://www.agence360digital.fr/" },
   ],
   about: [
@@ -331,6 +332,7 @@ export const fr: ResumeContent = {
     { label: "France", href: null },
     { label: "sabrinaheydel@gmail.com", href: "mailto:sabrinaheydel@gmail.com" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/sabrina-heydel-86021a23b/" },
+    { label: "GitHub", href: "https://github.com/Sabrinaheydel" },
     { label: "Portfolio", href: "https://www.agence360digital.fr/" },
   ],
   about: [
