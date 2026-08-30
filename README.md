@@ -2,6 +2,8 @@
 
 **AI Product Builder · Full-Stack Digital Systems**
 
+[Live CV - FR](https://product-craft-suite-68.lovable.app/fr) · [Live Resume - EN](https://product-craft-suite-68.lovable.app/en) · [Download PDF - FR](resume/Sabrina-Heydel-AI-Product-Builder-CV-FR.pdf) · [Download PDF - EN](resume/Sabrina-Heydel-AI-Product-Builder-Resume-EN.pdf)
+
 A bilingual, print-ready product resume built as a small web product rather than a static CV. It presents my experience through business problems, product decisions, system architecture and delivered outcomes.
 
 ## Positioning
@@ -44,6 +46,8 @@ Public client project for an international wellness business.
 - Responsive web experience
 - Two-page A4 editorial layout
 - Direct PDF export on desktop and mobile
+- High-resolution client-side export with clickable links
+- Vector PDFs generated automatically for GitHub downloads
 - Locale-specific PDF filenames
 - Print fallback
 - Clickable portfolio and LinkedIn links
@@ -51,15 +55,15 @@ Public client project for an international wellness business.
 
 ## PDF export
 
-The web resume is composed of two A4 sheets. Each sheet is rendered client-side with `html2canvas-pro`, then inserted into an A4 document with `jsPDF`.
+The live web resume provides a mobile-safe direct export. Each A4 sheet is rendered at approximately 300 DPI with lossless PNG and inserted into `jsPDF`; URL and email link annotations are recreated from the DOM so links remain clickable.
 
-This provides a real downloadable PDF on mobile and desktop instead of relying only on `window.print()`.
+For recruiters downloading directly from GitHub, a GitHub Actions workflow also generates print-quality PDFs with Chromium. These retain browser-native text rendering and hyperlinks and are committed into the `resume/` directory automatically.
 
 ## Tech stack
 
 **Core:** React, TypeScript, TanStack Start, Tailwind CSS
 
-**PDF:** jsPDF, html2canvas-pro
+**PDF:** jsPDF, html2canvas-pro, Chromium / Playwright automation
 
 **Product stack represented in the resume:** Next.js, Lovable, Webflow, Supabase, PostgreSQL, GitHub, PostHog, Sentry, n8n, Make, Zapier, Brevo, APIs, Webhooks, JSON and AI tooling.
 
@@ -71,6 +75,9 @@ src/
 ├── content/resume.ts      # FR/EN resume content
 ├── lib/export-pdf.ts      # Mobile-safe PDF export
 └── routes/                # Locale routes
+
+resume/                    # Auto-generated recruiter PDFs
+.github/workflows/         # PDF generation automation
 ```
 
 ## Run locally
@@ -90,6 +97,8 @@ bun run build
 
 - Portfolio: https://www.agence360digital.fr/
 - LinkedIn: https://www.linkedin.com/in/sabrina-heydel-86021a23b/
+- Live CV FR: https://product-craft-suite-68.lovable.app/fr
+- Live Resume EN: https://product-craft-suite-68.lovable.app/en
 
 ## About
 
