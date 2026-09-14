@@ -109,7 +109,7 @@ export const en: ResumeContent = {
     "You have an idea or operational problem and need someone who can turn it into a working product.",
   ],
   about: [
-    "I sit between business, product and technology. My role is to understand how a business actually works, identify where the friction is, and turn that problem into a digital product or system people can use.",
+    "I work at the intersection of business, product and technology. My role is to understand how a business actually works, identify where the friction is, and turn that problem into a digital product or system people can use.",
     "I can take a project from discovery to a working implementation: workflows, UX, data structure, APIs, automation, AI integration, testing and deployment. I don't start with AI. I start with the business problem — then use AI where it genuinely improves the workflow, access to information or decision-making.",
   ],
   capabilities: [
