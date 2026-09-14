@@ -99,7 +99,7 @@ export const en: ResumeContent = {
   },
   name: "Sabrina Heydel",
   title: ["AI Product Builder", "Business Systems, Automation & AI"],
-  lead: "From business problem to working product. I design and build digital systems that connect workflows, data, automation and AI — from discovery and UX to implementation and deployment.",
+  lead: "From business problem to working product. I design and build digital systems that connect workflows, data, automation and AI from discovery and UX to implementation and deployment.",
   contacts: sharedContacts,
   callout: [
     "Your teams are losing time between disconnected tools.",
@@ -110,7 +110,7 @@ export const en: ResumeContent = {
   ],
   about: [
     "I work at the intersection of business, product and technology. My role is to understand how a business actually works, identify where the friction is, and turn that problem into a digital product or system people can use.",
-    "I can take a project from discovery to a working implementation: workflows, UX, data structure, APIs, automation, AI integration, testing and deployment. I don't start with AI. I start with the business problem — then use AI where it genuinely improves the workflow, access to information or decision-making.",
+    "I can take a project from discovery to a working implementation: workflows, UX, data structure, APIs, automation, AI integration, testing and deployment. I don't start with AI. I start with the business problem then use AI where it genuinely improves the workflow, access to information or decision-making.",
   ],
   capabilities: [
     {
@@ -250,7 +250,7 @@ export const en: ResumeContent = {
     },
   ],
   closing:
-    "Give me a business problem, a fragmented workflow or an AI use case — I'll turn it into a working system.",
+    "Give me a business problem, a fragmented workflow or an AI use case : I'll turn it into a working system.",
   meta: {
     title: "Sabrina Heydel — AI Product Builder | Business Systems, Automation & AI",
     description:
