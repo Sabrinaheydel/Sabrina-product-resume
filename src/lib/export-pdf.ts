@@ -37,12 +37,7 @@ export async function exportSheetsToPdf(sheets: HTMLElement[], fileName: string)
           height: (rect.height / sheetRect.height) * pageHeight,
         };
       })
-      .filter(
-        (link) =>
-          link.width > 0 &&
-          link.height > 0 &&
-          /^(https?:|mailto:)/i.test(link.href),
-      );
+      .filter((link) => link.width > 0 && link.height > 0 && /^(https?:|mailto:)/i.test(link.href));
 
     const canvas = await html2canvas(sheet, {
       scale: renderScale,

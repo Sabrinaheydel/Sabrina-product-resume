@@ -303,7 +303,12 @@ export const fr: ResumeContent = {
   capabilities: [
     {
       group: "Comprendre",
-      items: ["Discovery métier", "Cartographie des processus", "Besoins utilisateurs", "Cas d'usage"],
+      items: [
+        "Discovery métier",
+        "Cartographie des processus",
+        "Besoins utilisateurs",
+        "Cas d'usage",
+      ],
     },
     {
       group: "Construire",
