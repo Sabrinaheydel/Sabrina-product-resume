@@ -73,7 +73,7 @@ export const demoRequestHref = `mailto:${CONTACT_EMAIL}?subject=Demo%20request`;
 export const en: ResumeContent = {
   locale: "en",
   ui: {
-    callout: "Call me when…",
+    callout: "When to bring me in",
     about: "About",
     capabilities: "How I work",
     featured: "Featured products",
@@ -261,7 +261,7 @@ export const en: ResumeContent = {
 export const fr: ResumeContent = {
   locale: "fr",
   ui: {
-    callout: "Appelez-moi quand…",
+    callout: "Quand faire appel à moi",
     about: "À propos",
     capabilities: "Ma façon de travailler",
     featured: "Produits phares",
