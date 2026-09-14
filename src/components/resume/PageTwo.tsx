@@ -6,32 +6,41 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
   return (
     <Sheet>
       <section>
-        <SectionTitle label={c.ui.coreExpertise} />
-        <div className="grid grid-cols-4 gap-[2.4mm]">
-          {c.expertise.map((group) => (
+        <SectionTitle label={c.ui.capabilities} />
+        <div className="grid grid-cols-3 gap-[2.6mm]">
+          {c.capabilities.map((group) => (
             <Card key={group.group}>
-              <div className="text-[8pt] font-semibold leading-none tracking-[-0.01em]">
+              <div className="text-[8.6pt] font-semibold leading-none tracking-[-0.01em]">
                 {group.group}
               </div>
-              <ul className="mt-[2mm] space-y-[1mm]">
-                {group.items.map((item) => (
-                  <li key={item} className="text-[7.8pt] leading-[1.35] text-ink/65">
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-[1.8mm] text-[7.8pt] leading-[1.4] text-ink/65">
+                {group.items.join(" · ")}
+              </p>
             </Card>
           ))}
         </div>
       </section>
-      <section className="mt-[3mm]">
+      <section className="mt-[2.4mm]">
+        <SectionTitle label={c.ui.secondary} />
+        <div className="grid grid-cols-2 gap-[2.6mm]">
+          {c.secondaryProjects.map((p) => (
+            <div key={p.name} className="rounded-[12px] border border-line/80 px-[3mm] py-[2.2mm]">
+              <div className="text-[9pt] font-semibold leading-none tracking-[-0.01em]">
+                {p.name}
+              </div>
+              <p className="mt-[1.6mm] text-[7.8pt] leading-[1.4] text-ink/65">{p.summary}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="mt-[2.4mm]">
         <SectionTitle label={c.ui.experience} />
         <div className="border-l border-line pl-[5mm]">
           {c.experience.map((item) => (
-            <div key={item.company} className="relative pb-[2.2mm] last:pb-0">
+            <div key={item.company} className="relative pb-[1.6mm] last:pb-0">
               <span className="absolute -left-[5mm] top-[1.6mm] h-[1.6mm] w-[1.6mm] -translate-x-[0.8mm] rounded-full bg-accent-blue" />
               <div className="flex items-baseline justify-between gap-[4mm]">
-                <h3 className="text-[9.6pt] font-semibold leading-none tracking-[-0.01em]">
+                <h3 className="text-[9.4pt] font-semibold leading-none tracking-[-0.01em]">
                   {item.company}
                   <span className="ml-[2mm] text-[8pt] font-medium text-ink/55">{item.role}</span>
                 </h3>
@@ -39,48 +48,57 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
                   {item.period}
                 </span>
               </div>
-              <p className="mt-[1mm] text-[8pt] leading-[1.4] text-ink/60">{item.detail}</p>
+              <p className="mt-[0.9mm] text-[7.8pt] leading-[1.35] text-ink/60">{item.detail}</p>
             </div>
           ))}
         </div>
       </section>
-      <section className="mt-[3mm]">
+      <section className="mt-[2.4mm]">
         <SectionTitle label={c.ui.education} />
-        <div className="grid grid-cols-2 gap-x-[6mm] gap-y-[1.6mm]">
+        <div className="grid grid-cols-2 gap-x-[6mm] gap-y-[1.2mm]">
           {c.education.map((e) => (
-            <div key={e.title} className="border-t border-line/70 pt-[2mm]">
-              <div className="text-[8.6pt] font-semibold leading-[1.3]">{e.title}</div>
-              <div className="mt-[0.8mm] text-[7.8pt] text-ink/55">{e.org}</div>
+            <div key={e.title} className="border-t border-line/70 pt-[1.8mm]">
+              <div className="text-[8.4pt] font-semibold leading-[1.3]">{e.title}</div>
+              <div className="mt-[0.6mm] text-[7.6pt] text-ink/55">{e.org}</div>
             </div>
           ))}
         </div>
       </section>
-      <section className="mt-[3mm]">
+      <section className="mt-[2.4mm]">
         <SectionTitle label={c.ui.languages} />
         <div className="grid grid-cols-4 gap-[2.4mm]">
           {c.languages.map((l) => (
             <div
               key={l.name}
-              className="rounded-[12px] border border-line/80 bg-surface/60 px-[2.6mm] py-[1.6mm]"
+              className="rounded-[12px] border border-line/80 bg-surface/60 px-[2.6mm] py-[1.4mm]"
             >
-              <div className="text-[8.6pt] font-semibold leading-none">{l.name}</div>
-              <div className="mt-[1.4mm] text-[7.8pt] text-ink/55">{l.level}</div>
+              <div className="text-[8.4pt] font-semibold leading-none">{l.name}</div>
+              <div className="mt-[1.2mm] text-[7.6pt] text-ink/55">{l.level}</div>
             </div>
           ))}
         </div>
       </section>
-      <section className="mt-[3mm]">
-        <SectionTitle label={c.ui.techStack} />
-        <div className="flex flex-wrap gap-[1.8mm]">
-          {c.techStack.map((s) => (
-            <Pill key={s}>{s}</Pill>
+      <section className="mt-[2.4mm]">
+        <SectionTitle label={c.ui.toolkit} />
+        <div className="space-y-[1.4mm]">
+          {c.stackGroups.map((group) => (
+            <div key={group.group} className="flex items-start gap-[3mm]">
+              <span className="mt-[0.8mm] w-[32mm] shrink-0 text-[6.8pt] font-semibold uppercase tracking-[0.12em] text-ink/35">
+                {group.group}
+              </span>
+              <div className="flex flex-wrap gap-[1.6mm]">
+                {group.items.map((s) => (
+                  <Pill key={s}>{s}</Pill>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
       <div className="flex-1" />
-      <footer className="mt-[3mm] border-t border-line pt-[2.4mm]">
+      <footer className="mt-[2.4mm] border-t border-line pt-[2.4mm]">
         <div className="flex items-end justify-between gap-[6mm]">
-          <p className="max-w-[110mm] text-[9.6pt] font-medium leading-[1.35] tracking-[-0.01em]">
+          <p className="max-w-[110mm] text-[9.4pt] font-medium leading-[1.35] tracking-[-0.01em]">
             {c.closing}
           </p>
           <div className="flex items-center gap-[2.4mm]">
