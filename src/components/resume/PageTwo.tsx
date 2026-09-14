@@ -20,7 +20,7 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
           ))}
         </div>
       </section>
-      <section className="mt-[3mm]">
+      <section className="mt-[2.4mm]">
         <SectionTitle label={c.ui.secondary} />
         <div className="grid grid-cols-2 gap-[2.6mm]">
           {c.secondaryProjects.map((p) => (
@@ -33,11 +33,11 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
           ))}
         </div>
       </section>
-      <section className="mt-[3mm]">
+      <section className="mt-[2.4mm]">
         <SectionTitle label={c.ui.experience} />
         <div className="border-l border-line pl-[5mm]">
           {c.experience.map((item) => (
-            <div key={item.company} className="relative pb-[2mm] last:pb-0">
+            <div key={item.company} className="relative pb-[1.6mm] last:pb-0">
               <span className="absolute -left-[5mm] top-[1.6mm] h-[1.6mm] w-[1.6mm] -translate-x-[0.8mm] rounded-full bg-accent-blue" />
               <div className="flex items-baseline justify-between gap-[4mm]">
                 <h3 className="text-[9.4pt] font-semibold leading-none tracking-[-0.01em]">
@@ -53,9 +53,9 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
           ))}
         </div>
       </section>
-      <section className="mt-[3mm]">
+      <section className="mt-[2.4mm]">
         <SectionTitle label={c.ui.education} />
-        <div className="grid grid-cols-2 gap-x-[6mm] gap-y-[1.4mm]">
+        <div className="grid grid-cols-2 gap-x-[6mm] gap-y-[1.2mm]">
           {c.education.map((e) => (
             <div key={e.title} className="border-t border-line/70 pt-[1.8mm]">
               <div className="text-[8.4pt] font-semibold leading-[1.3]">{e.title}</div>
@@ -64,7 +64,7 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
           ))}
         </div>
       </section>
-      <section className="mt-[3mm]">
+      <section className="mt-[2.4mm]">
         <SectionTitle label={c.ui.languages} />
         <div className="grid grid-cols-4 gap-[2.4mm]">
           {c.languages.map((l) => (
@@ -78,9 +78,9 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
           ))}
         </div>
       </section>
-      <section className="mt-[3mm]">
+      <section className="mt-[2.4mm]">
         <SectionTitle label={c.ui.toolkit} />
-        <div className="space-y-[1.6mm]">
+        <div className="space-y-[1.4mm]">
           {c.stackGroups.map((group) => (
             <div key={group.group} className="flex items-start gap-[3mm]">
               <span className="mt-[0.8mm] w-[32mm] shrink-0 text-[6.8pt] font-semibold uppercase tracking-[0.12em] text-ink/35">
@@ -96,7 +96,7 @@ export function PageTwo({ content: c }: { content: ResumeContent }) {
         </div>
       </section>
       <div className="flex-1" />
-      <footer className="mt-[3mm] border-t border-line pt-[2.4mm]">
+      <footer className="mt-[2.4mm] border-t border-line pt-[2.4mm]">
         <div className="flex items-end justify-between gap-[6mm]">
           <p className="max-w-[110mm] text-[9.4pt] font-medium leading-[1.35] tracking-[-0.01em]">
             {c.closing}
