@@ -297,7 +297,7 @@ export const fr: ResumeContent = {
     "Vous avez une idée ou un problème opérationnel et cherchez quelqu'un capable de le transformer en produit fonctionnel.",
   ],
   about: [
-    "Je travaille à l'interface entre métier, produit et technologie. Mon rôle est de comprendre comment une entreprise fonctionne réellement, d'identifier les frictions, puis de transformer le problème en produit ou système digital utilisable.",
+    "Je travaille à l'intersection du métier, du produit et de la technologie. Mon rôle est de comprendre comment une entreprise fonctionne réellement, d'identifier les frictions, puis de transformer le problème en produit ou système digital utilisable.",
     "Je peux prendre un projet du cadrage jusqu'à une implémentation fonctionnelle : workflows, UX, structure des données, APIs, automatisation, intégration IA, tests et déploiement. Je ne pars pas de l'IA. Je pars du problème métier — puis j'utilise l'IA là où elle améliore réellement le workflow, l'accès à l'information ou la prise de décision.",
   ],
   capabilities: [
