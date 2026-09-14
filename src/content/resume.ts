@@ -1,33 +1,38 @@
 export type Locale = "en" | "fr";
 
-export type Project = {
+export type PrimaryProject = {
   index: string;
   name: string;
-  challenge: string;
-  solution: string[];
-  role: string[];
-  stack: string[];
-  impact: string;
+  problem: string;
+  solution: string;
+  principle?: string;
+  tags: string[];
+};
+
+export type SecondaryProject = {
+  name: string;
+  summary: string;
 };
 
 export type ResumeContent = {
   locale: Locale;
   ui: {
-    caseStudy: string;
-    challenge: string;
-    solution: string;
-    myRole: string;
-    stack: string;
-    impact: string;
+    callout: string;
     about: string;
+    capabilities: string;
     featured: string;
     featuredHint: string;
-    coreExpertise: string;
+    problem: string;
+    solution: string;
+    principle: string;
+    approach: string;
+    secondary: string;
     experience: string;
     education: string;
     languages: string;
-    techStack: string;
+    toolkit: string;
     portfolio: string;
+    demoOnRequest: string;
     page: (n: number) => string;
     tagline: string;
     docLabel: string;
@@ -40,65 +45,50 @@ export type ResumeContent = {
   title: string[];
   lead: string;
   contacts: { label: string; href: string | null }[];
+  callout: string[];
   about: string[];
-  projects: Project[];
-  expertise: { group: string; items: string[] }[];
+  capabilities: { group: string; items: string[] }[];
+  primaryProjects: PrimaryProject[];
+  secondaryProjects: SecondaryProject[];
   experience: { company: string; role: string; period: string; detail: string }[];
   education: { title: string; org: string }[];
   languages: { name: string; level: string }[];
-  techStack: string[];
+  stackGroups: { group: string; items: string[] }[];
   closing: string;
   meta: { title: string; description: string };
 };
 
-const sharedStack = [
-  "TypeScript",
-  "React",
-  "Next.js",
-  "TanStack",
-  "Lovable",
-  "Webflow",
-  "Bubble",
-  "Supabase",
-  "PostgreSQL",
-  "APIs",
-  "Webhooks",
-  "JSON",
-  "GitHub",
-  "PostHog",
-  "Sentry",
-  "n8n",
-  "Make",
-  "Zapier",
-  "Brevo",
-  "Cal.com",
-  "ChatGPT",
-  "Claude",
-  "Gemini",
-  "Figma",
-  "Notion",
-  "Google Workspace",
-  "SEO",
+const CONTACT_EMAIL = "sabrinaheydel@gmail.com";
+
+const sharedContacts = [
+  { label: "France", href: null },
+  { label: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sabrina-heydel-86021a23b/" },
+  { label: "GitHub", href: "https://github.com/Sabrinaheydel" },
+  { label: "Portfolio", href: "https://www.agence360digital.fr/" },
 ];
+
+export const demoRequestHref = `mailto:${CONTACT_EMAIL}?subject=Demo%20request`;
 
 export const en: ResumeContent = {
   locale: "en",
   ui: {
-    caseStudy: "Case study",
-    challenge: "Business challenge",
-    solution: "Solution designed",
-    myRole: "My role",
-    stack: "Stack",
-    impact: "Impact",
+    callout: "Call me when…",
     about: "About",
-    featured: "Featured projects",
-    featuredHint: "Challenge → Solution → Role → Stack → Impact",
-    coreExpertise: "Core expertise",
+    capabilities: "How I work",
+    featured: "Featured products",
+    featuredHint: "Proprietary systems · Demo on request",
+    problem: "Business problem",
+    solution: "System built",
+    principle: "Principle",
+    approach: "Scope",
+    secondary: "Other products I've built",
     experience: "Professional experience",
     education: "Education & training",
     languages: "Languages",
-    techStack: "Tech stack",
+    toolkit: "Toolkit",
     portfolio: "Portfolio",
+    demoOnRequest: "Demo on request",
     page: (n) => `Page ${n} / 2`,
     tagline: "Sabrina Heydel — AI Product Builder",
     docLabel: "Resume · A4 · 2 pages",
@@ -108,133 +98,84 @@ export const en: ResumeContent = {
     fileName: "Sabrina-Heydel-AI-Product-Builder-Resume-EN.pdf",
   },
   name: "Sabrina Heydel",
-  title: ["AI Product Builder", "Full-Stack Digital Systems"],
-  lead: "From the business problem to a deployed, production-ready system: product discovery, UX, architecture, data, APIs, automation, QA and deployment.",
-  contacts: [
-    { label: "France", href: null },
-    { label: "sabrinaheydel@gmail.com", href: "mailto:sabrinaheydel@gmail.com" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/sabrina-heydel-86021a23b/" },
-    { label: "GitHub", href: "https://github.com/Sabrinaheydel" },
-    { label: "Portfolio", href: "https://www.agence360digital.fr/" },
+  title: ["AI Product Builder", "Business Systems, Automation & AI"],
+  lead: "From business problem to working product. I design and build digital systems that connect workflows, data, automation and AI — from discovery and UX to implementation and deployment.",
+  contacts: sharedContacts,
+  callout: [
+    "Your teams are losing time between disconnected tools.",
+    "A critical workflow still relies on spreadsheets, emails or manual tasks.",
+    "You need a CRM, internal tool or business interface that actually fits the way your team works.",
+    "You want to introduce AI, but need to identify where it creates real business value first.",
+    "You have an idea or operational problem and need someone who can turn it into a working product.",
   ],
   about: [
-    "I own digital products end to end, autonomously: framing the business need, choosing the architecture, designing the UX, modelling the data, wiring APIs and automations, then testing, deploying and instrumenting what I ship.",
-    "My focus is business usefulness rather than technology for its own sake: connecting front-end, database, APIs, automation and observability into tools that teams actually adopt, save time with and can maintain.",
+    "I sit between business, product and technology. My role is to understand how a business actually works, identify where the friction is, and turn that problem into a digital product or system people can use.",
+    "I can take a project from discovery to a working implementation: workflows, UX, data structure, APIs, automation, AI integration, testing and deployment. I don't start with AI. I start with the business problem — then use AI where it genuinely improves the workflow, access to information or decision-making.",
   ],
-  projects: [
+  capabilities: [
+    {
+      group: "Understand",
+      items: ["Business discovery", "Process mapping", "User needs", "Use cases"],
+    },
+    {
+      group: "Build",
+      items: ["UX", "Internal tools", "CRM", "Dashboards", "Data", "APIs", "AI workflows"],
+    },
+    {
+      group: "Deliver",
+      items: ["Testing", "Implementation", "Documentation", "User adoption", "Analytics"],
+    },
+  ],
+  primaryProjects: [
     {
       index: "01",
-      name: "TalentFlow AI",
-      challenge: "Recruiter workflow is fragmented across ATS, notes, email and separate AI tools.",
-      solution: [
-        "Bilingual recruitment workspace",
-        "Pipeline",
-        "Dashboard",
-        "Candidate intelligence",
-        "Interview preparation",
-        "Copilot UX",
-        "Guided demo",
-        "Product analytics",
-      ],
-      role: [
-        "Product Discovery",
-        "Workflow analysis",
+      name: "A360 OS | AI-Powered Business Operating System",
+      problem:
+        "Business information, customer data, actions and decisions are often fragmented across CRM, emails, documents and multiple tools.",
+      solution:
+        "A unified business interface where teams can access the right information, manage workflows and make better decisions. An AI copilot orchestrates specialized agents to retrieve and exploit information, prepare actions and automate execution — while keeping human validation at key decision points.",
+      tags: [
+        "Product strategy",
+        "Business process analysis",
         "UX",
-        "Information architecture",
-        "Front-end architecture",
-        "AI-assisted development",
-        "QA",
-        "Analytics instrumentation",
-        "Deployment & documentation",
+        "Data architecture",
+        "AI orchestration",
+        "Automation",
+        "Human-in-the-loop workflows",
+        "Implementation",
       ],
-      stack: [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Webflow Cloud",
-        "GitHub",
-        "PostHog",
-        "AI-ready architecture",
-      ],
-      impact:
-        "One coherent product workflow replacing several disconnected interfaces, shipped as a credible public beta.",
     },
     {
       index: "02",
-      name: "Real Estate Platform & CRM",
-      challenge:
-        "Agencies scatter acquisition, qualification, pricing and sales follow-up across disconnected tools.",
-      solution: [
-        "Public real-estate experience",
-        "Property search & interactive listings",
-        "Lead qualification forms",
-        "Loan & rental calculators creating CRM leads",
-        "CRM pipeline with lead scoring, notes, assignment, next actions",
-        "Appointments & property matching",
-        "Admin/demo roles with RLS and isolated sandbox",
-        "Simulated follow-up actions, feedback capture and analytics",
-      ],
-      role: [
-        "Business Analysis",
-        "Product Discovery",
-        "UX",
-        "System Design",
-        "Data Modelling",
-        "Supabase / RLS",
-        "Server authorization",
-        "Automation logic",
-        "QA",
-        "Demo architecture",
-        "Deployment",
-      ],
-      stack: [
-        "Lovable",
-        "React / TanStack",
-        "TypeScript",
-        "Supabase / PostgreSQL",
-        "RLS",
-        "APIs",
-        "Brevo",
-        "GitHub",
-      ],
-      impact:
-        "The website becomes an operating system for acquisition, qualification and sales follow-up — not just a showcase.",
-    },
-    {
-      index: "03",
-      name: "Melissa Breathwork",
-      challenge: "Create an international digital ecosystem for a solo practitioner.",
-      solution: [
-        "3-language website",
-        "Booking",
+      name: "Radar 360 | AI-Assisted Prospecting System",
+      problem:
+        "B2B prospecting requires too much manual research, qualification, personalization and follow-up.",
+      solution:
+        "A multi-source prospecting system that identifies and qualifies companies, detects business opportunities, prepares contextual outreach, tracks follow-ups and analyzes responses to recommend the next best action.",
+      principle:
+        "AI assists research, qualification and decision-making. Humans remain in control of sensitive outreach and commercial decisions.",
+      tags: [
+        "Product discovery",
+        "AI workflows",
+        "Multi-source data",
         "CRM",
-        "Newsletter",
-        "Lead magnet",
-        "Brevo automation",
-        "Training & handover",
+        "Lead scoring",
+        "Automation",
+        "LLM integration",
+        "Business logic",
       ],
-      role: ["UX", "Customer Journey", "Copywriting", "Automation", "Training"],
-      stack: ["Lovable", "Brevo", "Cal.com"],
-      impact:
-        "An autonomous acquisition and booking system across three languages. Client project · public testimonial available.",
     },
   ],
-  expertise: [
+  secondaryProjects: [
     {
-      group: "Discovery & Strategy",
-      items: ["Product Discovery", "Business Analysis", "Product Thinking"],
+      name: "TalentFlow AI",
+      summary:
+        "A bilingual recruitment workspace combining candidate pipeline, dashboards, candidate intelligence and interview preparation into a single experience.",
     },
     {
-      group: "Design & Structure",
-      items: ["UX", "Information Architecture", "Dashboards"],
-    },
-    {
-      group: "Build & Automate",
-      items: ["AI-assisted Development", "Data modelling", "APIs", "Automation", "Supabase"],
-    },
-    {
-      group: "Ship & Operate",
-      items: ["QA", "Deployment", "Analytics & observability", "Prompt Engineering"],
+      name: "Real Estate CRM & Platform",
+      summary:
+        "A connected real-estate platform turning website interactions, calculators and qualification forms into actionable CRM leads, with scoring, pipeline management and next actions.",
     },
   ],
   experience: [
@@ -242,7 +183,7 @@ export const en: ResumeContent = {
       company: "Agence 360 Digital",
       role: "Founder — AI Product Builder",
       period: "2025–Present",
-      detail: "Product discovery, AI-assisted delivery and digital systems for SMB teams.",
+      detail: "Business discovery, product building and digital systems for SMB teams.",
     },
     {
       company: "OPAL / VINCI Facilities | Balenciaga Couture",
@@ -260,8 +201,7 @@ export const en: ResumeContent = {
       company: "Chanel",
       role: "Assistant Project Manager",
       period: "Jun 2019–Aug 2020",
-      detail:
-        "Global RFID deployment · Project support · Testing · Documentation · International coordination",
+      detail: "Global RFID deployment · Testing · Documentation · International coordination",
     },
     {
       company: "USIDE",
@@ -290,33 +230,53 @@ export const en: ResumeContent = {
     { name: "German", level: "Intermediate" },
     { name: "Spanish", level: "Basic" },
   ],
-  techStack: sharedStack,
-  closing: "I enjoy turning complex business problems into simple digital products.",
+  stackGroups: [
+    {
+      group: "Core toolkit",
+      items: [
+        "Lovable",
+        "Supabase / PostgreSQL",
+        "APIs",
+        "n8n / Make",
+        "GitHub",
+        "Figma",
+        "PostHog",
+      ],
+    },
+    { group: "AI", items: ["OpenAI", "Claude", "Gemini", "AI-assisted development"] },
+    {
+      group: "Also worked with",
+      items: ["React", "TypeScript", "Next.js", "Webflow", "Brevo", "Cal.com"],
+    },
+  ],
+  closing:
+    "Give me a business problem, a fragmented workflow or an AI use case — I'll turn it into a working system.",
   meta: {
-    title: "Sabrina Heydel — AI Product Builder & Full-Stack Digital Systems",
+    title: "Sabrina Heydel — AI Product Builder | Business Systems, Automation & AI",
     description:
-      "From business problem to deployed system: product discovery, UX, data, APIs, automation, QA and deployment. Editorial resume and case studies of Sabrina Heydel.",
+      "AI Product Builder and implementation consultant: from business problem to working product — workflows, internal tools, CRM, data, APIs, automation and AI integration.",
   },
 };
 
 export const fr: ResumeContent = {
   locale: "fr",
   ui: {
-    caseStudy: "Étude de cas",
-    challenge: "Problématique métier",
-    solution: "Solution conçue",
-    myRole: "Mon rôle",
-    stack: "Stack",
-    impact: "Impact",
+    callout: "Appelez-moi quand…",
     about: "À propos",
-    featured: "Projets clés",
-    featuredHint: "Problématique → Solution → Rôle → Stack → Impact",
-    coreExpertise: "Expertises clés",
+    capabilities: "Ma façon de travailler",
+    featured: "Produits phares",
+    featuredHint: "Produits propriétaires · Démo sur demande",
+    problem: "Problème métier",
+    solution: "Système construit",
+    principle: "Principe",
+    approach: "Périmètre",
+    secondary: "Autres produits construits",
     experience: "Expérience professionnelle",
     education: "Formation & certifications",
     languages: "Langues",
-    techStack: "Stack technique",
+    toolkit: "Outils",
     portfolio: "Portfolio",
+    demoOnRequest: "Démo sur demande",
     page: (n) => `Page ${n} / 2`,
     tagline: "Sabrina Heydel — AI Product Builder",
     docLabel: "CV · A4 · 2 pages",
@@ -326,134 +286,84 @@ export const fr: ResumeContent = {
     fileName: "Sabrina-Heydel-AI-Product-Builder-CV-FR.pdf",
   },
   name: "Sabrina Heydel",
-  title: ["AI Product Builder", "Systèmes digitaux full-stack"],
-  lead: "De la problématique métier au système déployé et prêt pour la production : discovery produit, UX, architecture, données, APIs, automatisation, QA et déploiement.",
-  contacts: [
-    { label: "France", href: null },
-    { label: "sabrinaheydel@gmail.com", href: "mailto:sabrinaheydel@gmail.com" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/sabrina-heydel-86021a23b/" },
-    { label: "GitHub", href: "https://github.com/Sabrinaheydel" },
-    { label: "Portfolio", href: "https://www.agence360digital.fr/" },
+  title: ["AI Product Builder", "Systèmes métiers, automatisation & IA"],
+  lead: "Du problème métier au produit fonctionnel. Je conçois et construis des systèmes digitaux qui relient workflows, données, automatisation et IA — du cadrage au déploiement.",
+  contacts: sharedContacts,
+  callout: [
+    "Vos équipes perdent du temps entre des outils qui ne communiquent pas.",
+    "Un processus critique repose encore sur Excel, des emails ou des tâches manuelles.",
+    "Vous avez besoin d'un CRM, d'un outil interne ou d'une interface métier adaptée à votre fonctionnement réel.",
+    "Vous voulez intégrer l'IA mais devez d'abord identifier où elle crée réellement de la valeur.",
+    "Vous avez une idée ou un problème opérationnel et cherchez quelqu'un capable de le transformer en produit fonctionnel.",
   ],
   about: [
-    "Je pilote des produits digitaux de bout en bout, en autonomie : cadrage du besoin métier, choix d'architecture, UX, modélisation des données, intégration des APIs et automatisations, puis tests, déploiement et instrumentation.",
-    "Ma priorité reste l'utilité métier plutôt que la technologie : relier front-end, base de données, APIs, automatisation et observabilité pour créer des outils réellement adoptés, qui font gagner du temps et restent maintenables.",
+    "Je travaille à l'interface entre métier, produit et technologie. Mon rôle est de comprendre comment une entreprise fonctionne réellement, d'identifier les frictions, puis de transformer le problème en produit ou système digital utilisable.",
+    "Je peux prendre un projet du cadrage jusqu'à une implémentation fonctionnelle : workflows, UX, structure des données, APIs, automatisation, intégration IA, tests et déploiement. Je ne pars pas de l'IA. Je pars du problème métier — puis j'utilise l'IA là où elle améliore réellement le workflow, l'accès à l'information ou la prise de décision.",
   ],
-  projects: [
+  capabilities: [
+    {
+      group: "Comprendre",
+      items: ["Discovery métier", "Cartographie des процессus", "Besoins utilisateurs", "Cas d'usage"],
+    },
+    {
+      group: "Construire",
+      items: ["UX", "Outils internes", "CRM", "Dashboards", "Données", "APIs", "Workflows IA"],
+    },
+    {
+      group: "Déployer",
+      items: ["Tests", "Implémentation", "Documentation", "Adoption utilisateurs", "Analytics"],
+    },
+  ],
+  primaryProjects: [
     {
       index: "01",
-      name: "TalentFlow AI",
-      challenge:
-        "Le travail des recruteurs est fragmenté entre ATS, notes, emails et outils d'IA séparés.",
-      solution: [
-        "Espace de recrutement bilingue",
-        "Pipeline",
-        "Dashboard",
-        "Intelligence candidat",
-        "Préparation d'entretien",
-        "UX Copilote",
-        "Démo guidée",
-        "Analytics produit",
-      ],
-      role: [
-        "Product Discovery",
-        "Analyse des workflows",
+      name: "A360 OS | Système d'exploitation métier augmenté par l'IA",
+      problem:
+        "Les informations métier, données clients, actions et décisions sont souvent dispersées entre CRM, emails, documents et multiples outils.",
+      solution:
+        "Une interface métier unifiée où les équipes retrouvent la bonne information, pilotent leurs workflows et prennent de meilleures décisions. Un copilote IA orchestre des agents spécialisés pour rechercher et exploiter l'information, préparer les actions et automatiser leur exécution, avec validation humaine aux étapes clés.",
+      tags: [
+        "Stratégie produit",
+        "Analyse des processus métier",
         "UX",
-        "Architecture de l'information",
-        "Architecture front-end",
-        "Développement assisté par IA",
-        "QA",
-        "Instrumentation analytics",
-        "Déploiement & documentation",
+        "Architecture des données",
+        "Orchestration IA",
+        "Automatisation",
+        "Workflows human-in-the-loop",
+        "Implémentation",
       ],
-      stack: [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Webflow Cloud",
-        "GitHub",
-        "PostHog",
-        "Architecture AI-ready",
-      ],
-      impact:
-        "Un parcours produit unique qui remplace plusieurs interfaces déconnectées, livré en bêta publique crédible.",
     },
     {
       index: "02",
-      name: "Plateforme Immobilière & CRM",
-      challenge:
-        "Les agences dispersent acquisition, qualification, chiffrage et suivi commercial sur des outils déconnectés.",
-      solution: [
-        "Expérience immobilière publique",
-        "Recherche & annonces interactives",
-        "Formulaires de qualification",
-        "Calculateurs prêt & location créant des leads CRM",
-        "Pipeline CRM : scoring, notes, attribution, prochaines actions",
-        "Rendez-vous & matching de biens",
-        "Rôles admin/démo avec RLS et sandbox isolée",
-        "Actions de suivi simulées, feedback et analytics",
-      ],
-      role: [
-        "Analyse métier",
-        "Product Discovery",
-        "UX",
-        "Design système",
-        "Modélisation des données",
-        "Supabase / RLS",
-        "Autorisation serveur",
-        "Logique d'automatisation",
-        "QA",
-        "Architecture de démo",
-        "Déploiement",
-      ],
-      stack: [
-        "Lovable",
-        "React / TanStack",
-        "TypeScript",
-        "Supabase / PostgreSQL",
-        "RLS",
-        "APIs",
-        "Brevo",
-        "GitHub",
-      ],
-      impact:
-        "Le site devient un système d'exploitation pour l'acquisition, la qualification et le suivi commercial — pas une simple vitrine.",
-    },
-    {
-      index: "03",
-      name: "Melissa Breathwork",
-      challenge: "Créer un écosystème digital international pour une praticienne indépendante.",
-      solution: [
-        "Site en 3 langues",
-        "Réservation",
+      name: "Radar 360 | Système de prospection assisté par IA",
+      problem:
+        "La prospection B2B demande trop de recherche manuelle, de qualification, de personnalisation et de suivi.",
+      solution:
+        "Un système multi-source qui identifie et qualifie les entreprises, détecte les opportunités métier, prépare une approche contextualisée, suit les relances et analyse les réponses pour recommander la prochaine meilleure action.",
+      principle:
+        "L'IA assiste la recherche, la qualification et la décision. L'humain garde le contrôle des prises de contact sensibles et des décisions commerciales.",
+      tags: [
+        "Product discovery",
+        "Workflows IA",
+        "Données multi-sources",
         "CRM",
-        "Newsletter",
-        "Lead magnet",
-        "Automatisation Brevo",
-        "Formation & passation",
+        "Lead scoring",
+        "Automatisation",
+        "Intégration LLM",
+        "Logique métier",
       ],
-      role: ["UX", "Parcours client", "Copywriting", "Automatisation", "Formation"],
-      stack: ["Lovable", "Brevo", "Cal.com"],
-      impact:
-        "Un système d'acquisition et de réservation autonome en trois langues. Projet client · témoignage public disponible.",
     },
   ],
-  expertise: [
+  secondaryProjects: [
     {
-      group: "Discovery & Stratégie",
-      items: ["Product Discovery", "Analyse métier", "Product Thinking"],
+      name: "TalentFlow AI",
+      summary:
+        "Espace de recrutement bilingue réunissant pipeline candidats, tableaux de bord, intelligence candidat et préparation des entretiens dans une seule expérience.",
     },
     {
-      group: "Design & Structure",
-      items: ["UX", "Architecture de l'information", "Dashboards"],
-    },
-    {
-      group: "Build & Automatisation",
-      items: ["Développement IA", "Modélisation données", "APIs", "Automatisation", "Supabase"],
-    },
-    {
-      group: "Livraison & Ops",
-      items: ["QA", "Déploiement", "Analytics & observabilité", "Prompt Engineering"],
+      name: "Plateforme Immobilière & CRM",
+      summary:
+        "Plateforme immobilière connectée transformant les interactions du site, calculateurs et formulaires de qualification en leads CRM exploitables, avec scoring, pipeline et prochaines actions.",
     },
   ],
   experience: [
@@ -461,7 +371,7 @@ export const fr: ResumeContent = {
       company: "Agence 360 Digital",
       role: "Fondatrice — AI Product Builder",
       period: "2025–Aujourd'hui",
-      detail: "Product discovery, livraison assistée par IA et systèmes digitaux pour PME.",
+      detail: "Discovery métier, construction de produits et systèmes digitaux pour PME.",
     },
     {
       company: "OPAL / VINCI Facilities | Balenciaga Couture",
@@ -508,12 +418,31 @@ export const fr: ResumeContent = {
     { name: "Allemand", level: "Intermédiaire" },
     { name: "Espagnol", level: "Notions" },
   ],
-  techStack: sharedStack,
-  closing: "J'aime transformer des problématiques métier complexes en produits digitaux simples.",
+  stackGroups: [
+    {
+      group: "Outils principaux",
+      items: [
+        "Lovable",
+        "Supabase / PostgreSQL",
+        "APIs",
+        "n8n / Make",
+        "GitHub",
+        "Figma",
+        "PostHog",
+      ],
+    },
+    { group: "IA", items: ["OpenAI", "Claude", "Gemini", "Développement assisté par IA"] },
+    {
+      group: "Également utilisés",
+      items: ["React", "TypeScript", "Next.js", "Webflow", "Brevo", "Cal.com"],
+    },
+  ],
+  closing:
+    "Donnez-moi un problème métier, un workflow fragmenté ou un cas d'usage IA — j'en fais un système fonctionnel.",
   meta: {
-    title: "Sabrina Heydel — AI Product Builder & Systèmes digitaux full-stack",
+    title: "Sabrina Heydel — AI Product Builder | Systèmes métiers, automatisation & IA",
     description:
-      "De la problématique métier au système déployé : produit, UX, données, APIs, automatisation, QA et déploiement. CV éditorial et études de cas de Sabrina Heydel.",
+      "AI Product Builder et consultante en implémentation : du problème métier au produit fonctionnel — workflows, outils internes, CRM, données, APIs, automatisation et IA.",
   },
 };
 
