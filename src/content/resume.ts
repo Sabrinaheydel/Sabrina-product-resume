@@ -90,7 +90,7 @@ export const en: ResumeContent = {
     portfolio: "Portfolio",
     demoOnRequest: "Demo on request",
     page: (n) => `Page ${n} / 2`,
-    tagline: "Sabrina Heydel — AI Product Builder",
+    tagline: "Sabrina Heydel, AI Product Builder",
     docLabel: "Resume · A4 · 2 pages",
     exportPdf: "Export PDF",
     exporting: "Generating…",
@@ -99,7 +99,7 @@ export const en: ResumeContent = {
   },
   name: "Sabrina Heydel",
   title: ["AI Product Builder", "Business Systems, Automation & AI"],
-  lead: "From business problem to working product. I design and build digital systems that connect workflows, data, automation and AI — from discovery and UX to implementation and deployment.",
+  lead: "From business problem to working product. I design and build digital systems that connect workflows, data, automation and AI, from discovery and UX to implementation and deployment.",
   contacts: sharedContacts,
   callout: [
     "Your teams are losing time between disconnected tools.",
@@ -110,7 +110,7 @@ export const en: ResumeContent = {
   ],
   about: [
     "I work at the intersection of business, product and technology. My role is to understand how a business actually works, identify where the friction is, and turn that problem into a digital product or system people can use.",
-    "I can take a project from discovery to a working implementation: workflows, UX, data structure, APIs, automation, AI integration, testing and deployment. I don't start with AI. I start with the business problem — then use AI where it genuinely improves the workflow, access to information or decision-making.",
+    "I can take a project from discovery to a working implementation: workflows, UX, data structure, APIs, automation, AI integration, testing and deployment. I don't start with AI. I start with the business problem, then use AI where it genuinely improves the workflow, access to information or decision-making.",
   ],
   capabilities: [
     {
@@ -133,7 +133,7 @@ export const en: ResumeContent = {
       problem:
         "Business information, customer data, actions and decisions are often fragmented across CRM, emails, documents and multiple tools.",
       solution:
-        "A unified business interface where teams can access the right information, manage workflows and make better decisions. An AI copilot orchestrates specialized agents to retrieve and exploit information, prepare actions and automate execution — while keeping human validation at key decision points.",
+        "A unified business interface where teams can access the right information, manage workflows and make better decisions. An AI copilot orchestrates specialized agents to retrieve and exploit information, prepare actions and automate execution, while keeping human validation at key decision points.",
       tags: [
         "Product strategy",
         "Business process analysis",
@@ -181,7 +181,7 @@ export const en: ResumeContent = {
   experience: [
     {
       company: "Agence 360 Digital",
-      role: "Founder — AI Product Builder",
+      role: "Founder, AI Product Builder",
       period: "2025–Present",
       detail: "Business discovery, product building and digital systems for SMB teams.",
     },
@@ -218,7 +218,7 @@ export const en: ResumeContent = {
   ],
   education: [
     { title: "BTS Tourism", org: "IST Paris" },
-    { title: "Baccalaureate — History of Art, Museology", org: "UQAM, Montreal" },
+    { title: "Baccalaureate: History of Art, Museology", org: "UQAM, Montreal" },
     { title: "LLCE English", org: "Paris Sorbonne" },
     { title: "Digital Marketing & Copywriting", org: "LiveMentor" },
     { title: "Advanced Copywriting", org: "Marketing Mania" },
@@ -250,11 +250,11 @@ export const en: ResumeContent = {
     },
   ],
   closing:
-    "Give me a business problem, a fragmented workflow or an AI use case — I'll turn it into a working system.",
+    "Give me a business problem, a fragmented workflow or an AI use case, and I'll turn it into a working system.",
   meta: {
-    title: "Sabrina Heydel — AI Product Builder | Business Systems, Automation & AI",
+    title: "Sabrina Heydel, AI Product Builder | Business Systems, Automation & AI",
     description:
-      "AI Product Builder and implementation consultant: from business problem to working product — workflows, internal tools, CRM, data, APIs, automation and AI integration.",
+      "AI Product Builder and implementation consultant: from business problem to working product: workflows, internal tools, CRM, data, APIs, automation and AI integration.",
   },
 };
 
@@ -278,7 +278,7 @@ export const fr: ResumeContent = {
     portfolio: "Portfolio",
     demoOnRequest: "Démo sur demande",
     page: (n) => `Page ${n} / 2`,
-    tagline: "Sabrina Heydel — AI Product Builder",
+    tagline: "Sabrina Heydel, AI Product Builder",
     docLabel: "CV · A4 · 2 pages",
     exportPdf: "Exporter en PDF",
     exporting: "Génération…",
@@ -287,7 +287,7 @@ export const fr: ResumeContent = {
   },
   name: "Sabrina Heydel",
   title: ["AI Product Builder", "Systèmes métiers, automatisation & IA"],
-  lead: "Du problème métier au produit fonctionnel. Je conçois et construis des systèmes digitaux qui relient workflows, données, automatisation et IA — du cadrage au déploiement.",
+  lead: "Du problème métier au produit fonctionnel. Je conçois et construis des systèmes digitaux qui relient workflows, données, automatisation et IA, du cadrage au déploiement.",
   contacts: sharedContacts,
   callout: [
     "Vos équipes perdent du temps entre des outils qui ne communiquent pas.",
@@ -298,7 +298,7 @@ export const fr: ResumeContent = {
   ],
   about: [
     "Je travaille à l'intersection du métier, du produit et de la technologie. Mon rôle est de comprendre comment une entreprise fonctionne réellement, d'identifier les frictions, puis de transformer le problème en produit ou système digital utilisable.",
-    "Je peux prendre un projet du cadrage jusqu'à une implémentation fonctionnelle : workflows, UX, structure des données, APIs, automatisation, intégration IA, tests et déploiement. Je ne pars pas de l'IA. Je pars du problème métier — puis j'utilise l'IA là où elle améliore réellement le workflow, l'accès à l'information ou la prise de décision.",
+    "Je peux prendre un projet du cadrage jusqu'à une implémentation fonctionnelle : workflows, UX, structure des données, APIs, automatisation, intégration IA, tests et déploiement. Je ne pars pas de l'IA. Je pars du problème métier, puis j'utilise l'IA là où elle améliore réellement le workflow, l'accès à l'information ou la prise de décision.",
   ],
   capabilities: [
     {
@@ -374,7 +374,7 @@ export const fr: ResumeContent = {
   experience: [
     {
       company: "Agence 360 Digital",
-      role: "Fondatrice — AI Product Builder",
+      role: "Fondatrice, AI Product Builder",
       period: "2025–Aujourd'hui",
       detail: "Discovery métier, construction de produits et systèmes digitaux pour PME.",
     },
@@ -411,7 +411,7 @@ export const fr: ResumeContent = {
   ],
   education: [
     { title: "BTS Tourisme", org: "IST Paris" },
-    { title: "Baccalauréat — Histoire de l'art, Muséologie", org: "UQAM, Montréal" },
+    { title: "Baccalauréat : Histoire de l'art, Muséologie", org: "UQAM, Montréal" },
     { title: "LLCE Anglais", org: "Paris Sorbonne" },
     { title: "Marketing digital & Copywriting", org: "LiveMentor" },
     { title: "Copywriting avancé", org: "Marketing Mania" },
@@ -443,11 +443,11 @@ export const fr: ResumeContent = {
     },
   ],
   closing:
-    "Donnez-moi un problème métier, un workflow fragmenté ou un cas d'usage IA — j'en fais un système fonctionnel.",
+    "Donnez-moi un problème métier, un workflow fragmenté ou un cas d'usage IA, et j'en fais un système fonctionnel.",
   meta: {
-    title: "Sabrina Heydel — AI Product Builder | Systèmes métiers, automatisation & IA",
+    title: "Sabrina Heydel, AI Product Builder | Systèmes métiers, automatisation & IA",
     description:
-      "AI Product Builder et consultante en implémentation : du problème métier au produit fonctionnel — workflows, outils internes, CRM, données, APIs, automatisation et IA.",
+      "AI Product Builder et consultante en implémentation : du problème métier au produit fonctionnel : workflows, outils internes, CRM, données, APIs, automatisation et IA.",
   },
 };
 
