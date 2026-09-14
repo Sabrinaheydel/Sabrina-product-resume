@@ -287,7 +287,7 @@ export const fr: ResumeContent = {
   },
   name: "Sabrina Heydel",
   title: ["AI Product Builder", "Systèmes métiers, automatisation & IA"],
-  lead: "Du problème métier au produit fonctionnel. Je conçois et construis des systèmes digitaux qui relient workflows, données, automatisation et IA — du cadrage au déploiement.",
+  lead: "Du problème métier au produit fonctionnel. Je conçois et construis des systèmes digitaux qui relient workflows, données, automatisation et IA, du cadrage au déploiement.",
   contacts: sharedContacts,
   callout: [
     "Vos équipes perdent du temps entre des outils qui ne communiquent pas.",
@@ -298,7 +298,7 @@ export const fr: ResumeContent = {
   ],
   about: [
     "Je travaille à l'intersection du métier, du produit et de la technologie. Mon rôle est de comprendre comment une entreprise fonctionne réellement, d'identifier les frictions, puis de transformer le problème en produit ou système digital utilisable.",
-    "Je peux prendre un projet du cadrage jusqu'à une implémentation fonctionnelle : workflows, UX, structure des données, APIs, automatisation, intégration IA, tests et déploiement. Je ne pars pas de l'IA. Je pars du problème métier — puis j'utilise l'IA là où elle améliore réellement le workflow, l'accès à l'information ou la prise de décision.",
+    "Je peux prendre un projet du cadrage jusqu'à une implémentation fonctionnelle : workflows, UX, structure des données, APIs, automatisation, intégration IA, tests et déploiement. Je ne pars pas de l'IA. Je pars du problème métier puis j'utilise l'IA là où elle améliore réellement le workflow, l'accès à l'information ou la prise de décision.",
   ],
   capabilities: [
     {
@@ -443,7 +443,7 @@ export const fr: ResumeContent = {
     },
   ],
   closing:
-    "Donnez-moi un problème métier, un workflow fragmenté ou un cas d'usage IA — j'en fais un système fonctionnel.",
+    "Donnez-moi un problème métier, un workflow fragmenté ou un cas d'usage IA : j'en fais un système fonctionnel.",
   meta: {
     title: "Sabrina Heydel — AI Product Builder | Systèmes métiers, automatisation & IA",
     description:
