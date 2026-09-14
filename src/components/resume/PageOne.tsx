@@ -12,11 +12,12 @@ function PrimaryProjectCard({ project, c }: { project: PrimaryProject; c: Resume
         <h3 className="text-[11.4pt] font-semibold leading-[1.15] tracking-[-0.015em]">
           {project.name}
         </h3>
-        <span className="ml-auto shrink-0 rounded-[10px] bg-accent-blue px-[2.4mm] py-[1.2mm] text-[7pt] font-semibold uppercase tracking-[0.1em] text-paper">
-          <a href={demoRequestHref} className="text-paper no-underline">
-            {c.ui.demoOnRequest}
-          </a>
-        </span>
+        <a
+          href={demoRequestHref}
+          className="ml-auto shrink-0 rounded-[10px] bg-accent-blue px-[2.6mm] py-[1.4mm] text-[7pt] font-semibold uppercase tracking-[0.1em] text-paper no-underline"
+        >
+          {c.ui.demoOnRequest}
+        </a>
       </div>
       <div className="mt-[1.8mm] grid grid-cols-12 gap-x-[4mm] gap-y-[1.4mm]">
         <div className="col-span-4">
