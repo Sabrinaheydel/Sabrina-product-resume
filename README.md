@@ -6,6 +6,17 @@
 
 A bilingual, print-ready product resume built as a small web product rather than a static CV. It presents my experience through business problems, product decisions, system architecture and delivered outcomes.
 
+## Use case framing
+
+| | |
+|---|---|
+| **Business need** | Recruiters read a resume in seconds and need the same content as a web page, an A4 PDF and in two languages, always in sync. |
+| **Target users** | Recruiters and hiring managers, on desktop and mobile. |
+| **Data** | One structured content file (`src/content/resume.ts`) for both languages. |
+| **Scope** | FR and EN web resume, two-page A4 layout, client-side PDF export, automated print-quality PDFs. |
+| **Value delivered** | One update to the content file refreshes the web pages and both PDFs: no manual export or copy-paste between versions. |
+| **Guardrails** | No phone number in the public source; clickable links preserved in every PDF. |
+
 ## Positioning
 
 I design and build digital products from the initial business problem to a deployed MVP or operational system. My work combines product discovery, UX, information architecture, data modelling, APIs, automation, QA, deployment, analytics and observability.
